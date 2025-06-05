@@ -65,7 +65,7 @@ public abstract class AbstractLSystem
     /**
      * Random number generator, initialized at instantiation with a known seed. 
      */
-    private final Random rnd;
+    public final Random rnd;
     
     /**
      * Random seed used for resetting the generator.

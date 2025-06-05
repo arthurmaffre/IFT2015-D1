@@ -1,38 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="lindenmayer.TurtleImpTest$PushPop" time="0.003" tests="6" errors="0" skipped="0" failures="0">
   <properties>
-    <property name="java.specification.version" value="23"/>
+    <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.class.path" value="/Users/arthur/Library/Mobile Documents/com~apple~CloudDocs/Cours/IFT 2015/IFT2015-D1/target/test-classes:/Users/arthur/Library/Mobile Documents/com~apple~CloudDocs/Cours/IFT 2015/IFT2015-D1/target/classes:/Users/arthur/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.0/junit-jupiter-5.10.0.jar:/Users/arthur/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.0/junit-jupiter-api-5.10.0.jar:/Users/arthur/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/arthur/.m2/repository/org/junit/platform/junit-platform-commons/1.10.0/junit-platform-commons-1.10.0.jar:/Users/arthur/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/arthur/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.0/junit-jupiter-params-5.10.0.jar:/Users/arthur/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.0/junit-jupiter-engine-5.10.0.jar:/Users/arthur/.m2/repository/org/junit/platform/junit-platform-engine/1.10.0/junit-platform-engine-1.10.0.jar:/Users/arthur/.m2/repository/org/json/json/20230618/json-20230618.jar:"/>
+    <property name="java.class.path" value="/Users/arthur/Library/Mobile Documents/com~apple~CloudDocs/Cours/IFT 2015/IFT2015-D1/target/test-classes:/Users/arthur/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.0/junit-jupiter-5.10.0.jar:/Users/arthur/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.0/junit-jupiter-api-5.10.0.jar:/Users/arthur/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/arthur/.m2/repository/org/junit/platform/junit-platform-commons/1.10.0/junit-platform-commons-1.10.0.jar:/Users/arthur/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/arthur/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.0/junit-jupiter-params-5.10.0.jar:/Users/arthur/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.0/junit-jupiter-engine-5.10.0.jar:/Users/arthur/.m2/repository/org/junit/platform/junit-platform-engine/1.10.0/junit-platform-engine-1.10.0.jar:"/>
     <property name="java.vm.vendor" value="Homebrew"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.vendor.url" value="https://github.com/Homebrew/homebrew-core/issues"/>
     <property name="os.name" value="Mac OS X"/>
-    <property name="java.vm.specification.version" value="23"/>
+    <property name="java.vm.specification.version" value="17"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="CA"/>
-    <property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk/23.0.2/libexec/openjdk.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/arthur/Library/Mobile Documents/com~apple~CloudDocs/Cours/IFT 2015/IFT2015-D1/target/surefire/surefirebooter-20250526183222792_3.jar /Users/arthur/Library/Mobile Documents/com~apple~CloudDocs/Cours/IFT 2015/IFT2015-D1/target/surefire 2025-05-26T18-32-22_683-jvmRun1 surefire-20250526183222792_1tmp surefire_0-20250526183222792_2tmp"/>
+    <property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk@17/17.0.15/libexec/openjdk.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="org.apache.maven.surefire.booter.ForkedBooter /Users/arthur/Library/Mobile Documents/com~apple~CloudDocs/Cours/IFT 2015/IFT2015-D1/target/surefire 2025-06-05T07-39-39_427-jvmRun1 surefire-20250605073939551_1tmp surefire_0-20250605073939551_2tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="/Users/arthur/Library/Mobile Documents/com~apple~CloudDocs/Cours/IFT 2015/IFT2015-D1/target/test-classes:/Users/arthur/Library/Mobile Documents/com~apple~CloudDocs/Cours/IFT 2015/IFT2015-D1/target/classes:/Users/arthur/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.0/junit-jupiter-5.10.0.jar:/Users/arthur/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.0/junit-jupiter-api-5.10.0.jar:/Users/arthur/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/arthur/.m2/repository/org/junit/platform/junit-platform-commons/1.10.0/junit-platform-commons-1.10.0.jar:/Users/arthur/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/arthur/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.0/junit-jupiter-params-5.10.0.jar:/Users/arthur/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.0/junit-jupiter-engine-5.10.0.jar:/Users/arthur/.m2/repository/org/junit/platform/junit-platform-engine/1.10.0/junit-platform-engine-1.10.0.jar:/Users/arthur/.m2/repository/org/json/json/20230618/json-20230618.jar:"/>
+    <property name="surefire.test.class.path" value="/Users/arthur/Library/Mobile Documents/com~apple~CloudDocs/Cours/IFT 2015/IFT2015-D1/target/test-classes:/Users/arthur/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.0/junit-jupiter-5.10.0.jar:/Users/arthur/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.0/junit-jupiter-api-5.10.0.jar:/Users/arthur/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/arthur/.m2/repository/org/junit/platform/junit-platform-commons/1.10.0/junit-platform-commons-1.10.0.jar:/Users/arthur/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/arthur/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.0/junit-jupiter-params-5.10.0.jar:/Users/arthur/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.0/junit-jupiter-engine-5.10.0.jar:/Users/arthur/.m2/repository/org/junit/platform/junit-platform-engine/1.10.0/junit-platform-engine-1.10.0.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/Users/arthur"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="java.version.date" value="2025-01-21"/>
-    <property name="java.home" value="/opt/homebrew/Cellar/openjdk/23.0.2/libexec/openjdk.jdk/Contents/Home"/>
+    <property name="jdk.module.path" value="/Users/arthur/Library/Mobile Documents/com~apple~CloudDocs/Cours/IFT 2015/IFT2015-D1/target/classes:/Users/arthur/.m2/repository/org/json/json/20230618/json-20230618.jar"/>
+    <property name="java.version.date" value="2025-04-15"/>
+    <property name="java.home" value="/opt/homebrew/Cellar/openjdk@17/17.0.15/libexec/openjdk.jdk/Contents/Home"/>
     <property name="file.separator" value="/"/>
     <property name="basedir" value="/Users/arthur/Library/Mobile Documents/com~apple~CloudDocs/Cours/IFT 2015/IFT2015-D1"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/arthur/Library/Mobile Documents/com~apple~CloudDocs/Cours/IFT 2015/IFT2015-D1/target/surefire/surefirebooter-20250526183222792_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/arthur/.m2/repository/org/apache/maven/surefire/surefire-api/3.1.2/surefire-api-3.1.2.jar:/Users/arthur/.m2/repository/org/apache/maven/surefire/surefire-booter/3.1.2/surefire-booter-3.1.2.jar:/Users/arthur/.m2/repository/org/apache/maven/surefire/surefire-extensions-spi/3.1.2/surefire-extensions-spi-3.1.2.jar:/Users/arthur/.m2/repository/org/apache/maven/surefire/surefire-logger-api/3.1.2/surefire-logger-api-3.1.2.jar:/Users/arthur/.m2/repository/org/apache/maven/surefire/surefire-shared-utils/3.1.2/surefire-shared-utils-3.1.2.jar:/Users/arthur/Library/Mobile Documents/com~apple~CloudDocs/Cours/IFT 2015/IFT2015-D1/target/test-classes:/Users/arthur/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.0/junit-jupiter-5.10.0.jar:/Users/arthur/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.0/junit-jupiter-api-5.10.0.jar:/Users/arthur/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/arthur/.m2/repository/org/junit/platform/junit-platform-commons/1.10.0/junit-platform-commons-1.10.0.jar:/Users/arthur/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/arthur/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.0/junit-jupiter-params-5.10.0.jar:/Users/arthur/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.0/junit-jupiter-engine-5.10.0.jar:/Users/arthur/.m2/repository/org/junit/platform/junit-platform-engine/1.10.0/junit-platform-engine-1.10.0.jar:/Users/arthur/.m2/repository/org/apache/maven/surefire/surefire-junit-platform/3.1.2/surefire-junit-platform-3.1.2.jar:/Users/arthur/.m2/repository/org/apache/maven/surefire/common-java5/3.1.2/common-java5-3.1.2.jar:/Users/arthur/.m2/repository/org/junit/platform/junit-platform-launcher/1.10.0/junit-platform-launcher-1.10.0.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="java.runtime.version" value="23.0.2"/>
+    <property name="java.runtime.version" value="17.0.15+0"/>
     <property name="user.name" value="arthur"/>
-    <property name="stdout.encoding" value="UTF-8"/>
     <property name="path.separator" value=":"/>
     <property name="os.version" value="15.5"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
@@ -42,26 +41,26 @@
     <property name="localRepository" value="/Users/arthur/.m2/repository"/>
     <property name="java.vendor.url.bug" value="https://github.com/Homebrew/homebrew-core/issues"/>
     <property name="java.io.tmpdir" value="/var/folders/3d/px25gn9n1cg8clmw10nxnsg00000gn/T/"/>
-    <property name="java.version" value="23.0.2"/>
+    <property name="java.version" value="17.0.15"/>
     <property name="user.dir" value="/Users/arthur/Library/Mobile Documents/com~apple~CloudDocs/Cours/IFT 2015/IFT2015-D1"/>
     <property name="os.arch" value="aarch64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="native.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/Users/arthur/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
-    <property name="java.vm.info" value="mixed mode, sharing"/>
-    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vm.info" value="mixed mode"/>
     <property name="java.vendor" value="Homebrew"/>
-    <property name="java.vm.version" value="23.0.2"/>
+    <property name="java.vm.version" value="17.0.15+0"/>
+    <property name="java.specification.maintenance.version" value="1"/>
     <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
-    <property name="java.class.version" value="67.0"/>
+    <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testRotationsRightLeft" classname="lindenmayer.TurtleImpTest" time="0.01"/>
+  <testcase name="testRotationsRightLeft" classname="lindenmayer.TurtleImpTest" time="0.009"/>
   <testcase name="testInit" classname="lindenmayer.TurtleImpTest" time="0.001"/>
-  <testcase name="testGettersAfterSetUnits" classname="lindenmayer.TurtleImpTest" time="0.001"/>
+  <testcase name="testGettersAfterSetUnits" classname="lindenmayer.TurtleImpTest" time="0.0"/>
   <testcase name="testDefensiveCopy" classname="lindenmayer.TurtleImpTest" time="0.001"/>
-  <testcase name="testPopOnEmptyStackDoesNotCrash" classname="lindenmayer.TurtleImpTest$PushPop" time="0">
+  <testcase name="testPopOnEmptyStackDoesNotCrash" classname="lindenmayer.TurtleImpTest$PushPop" time="0.0">
     <system-err><![CDATA[Stack is empty. Cannot pop.
 ]]></system-err>
   </testcase>
-  <testcase name="testPushPopRoundTrip" classname="lindenmayer.TurtleImpTest$PushPop" time="0"/>
+  <testcase name="testPushPopRoundTrip" classname="lindenmayer.TurtleImpTest$PushPop" time="0.001"/>
 </testsuite>
