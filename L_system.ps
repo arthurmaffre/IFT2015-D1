@@ -1,0 +1,119 @@
+/recursive_verif { %Fonction de vérification pour récursive: format: n recursive_verif
+                    % vérifie que la pile soit de longeur 1
+                    % vérifie que l'argument n soit un nombre, entier, positif ou nul.
+                    
+                    1 assertSize %la fonction attend n, une pile de 1 element
+
+                    assertInteger % vérifie que le dernier de la pile est un integer
+
+                    assertPositive % vérifie que le dernier de la pile est positif
+
+
+
+
+} def
+
+                    /assertSize {
+                        % attend: expected_size assertSize
+                        count 1 sub %Compte n-1 élément
+                        eq
+                        {}
+                        {(Ils sont différents: AssertSize Interruption) stack stop} ifelse
+
+                    } def
+
+                    /assertInteger {
+                        % vérifie si le nombre est un integer
+                        dup type /integertype eq
+                        {}
+                        {(Le dernier de la pile n'est pas un integer: AssertInteger Interruption) stack stop} ifelse 
+                    } def
+
+
+                    /assertPositive {
+                        % vérifie si le dernier element est positif
+                        dup 0 ge
+                        {}
+                        {(Ce n'est pas positif: AssertPositive Interruption) stack stop} ifelse
+                    } def
+
+
+/print { %fonction print : (message) print
+    =
+} def
+
+/println { %fonction de print avec retour a la ligne : (message) print
+    (\n) =
+    =
+} def
+
+/mystack { %fonction pour faire un stack personnalisé qui met un peu d'espace pour rendre la visualisation claire
+  (\n) print         % saute 1 lignes
+  (----- DEBUG: État de la pile mystack ----- ) print
+  (\n) print         % saute 1 lignes
+  stack
+} def
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  recursive  –  appel récursif principal
+%  pile attend   n
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+/recursive {               % n --
+    
+    recursive_verif % fonction de vérification que n -- soit seul, entier, positif. 
+
+    dup 0 le
+    {(arret de la boucle ) println}                   % cas de base : n ≤ 0 → on stoppe
+    {
+        (continue ) println           % sinon on continue la descente
+        bouclefor
+        
+    } ifelse
+} def
+
+
+
+
+                        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                        %  bouclefor  –  boucle sur i = 0 1 2 3
+                        %  pile attend   n
+                        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                        /bouclefor {               % n -- inside n i
+                            recursive_verif % verification
+                            0 1 3 {                 % i vaudra 0 1 2 3
+                                (test ) println
+                                insidefor %envoie n i 
+                            } for
+
+                                                 % enlève la copie résiduelle de n
+                        } def
+
+
+
+
+                        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                        %  insidefor  –  applique la récursion pour le sous-index i
+                        %  pile attend   n  i
+                        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                        /insidefor {               %stack quit% n i --
+                            dup println 2 eq %stack quit                % si i = 2 on ignore la branche
+                            {} %caractere a ignorer 
+                            { %caractere a faire
+                                1 sub 
+                                recursive           % appelle la récursion
+                                1 add mystack
+                            } ifelse
+                        } def
+
+
+
+
+
+
+10
+recursive
